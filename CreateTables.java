@@ -11,11 +11,11 @@ public class CreateTables {
         try (Connection conn = DriverManager.getConnection(jdbcUrl, username, password);
              Statement stmt = conn.createStatement()) {
 
-            String createDepartmentTable = "CREATE TABLE Depart ("
+            String createDepartmentTable = "CREATE TABLE DepartmentTable ("
                     + "Did INT PRIMARY KEY, "
                     + "Dname VARCHAR(50))";
 
-            String createEmployeeTable = "CREATE TABLE Emp ("
+            String createEmployeeTable = "CREATE TABLE EmployeeTable ("
                     + "Eid INT PRIMARY KEY, "
                     + "Ename VARCHAR(100), "
                     + "Salary DECIMAL(10, 2), "

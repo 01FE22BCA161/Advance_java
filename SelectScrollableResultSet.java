@@ -15,7 +15,7 @@ public class SelectScrollableResultSet {
         try (Connection conn = DriverManager.getConnection(jdbcUrl, username, password);
              Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)) {
 
-            String query = "SELECT Ename, Salary FROM Emp";
+            String query = "SELECT Ename, Salary FROM EmployeeTable";
             ResultSet rs = stmt.executeQuery(query);
 
             // Prompt user for action

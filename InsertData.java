@@ -14,7 +14,7 @@ public class InsertData {
         try (Connection conn = DriverManager.getConnection(jdbcUrl, username, password)) {
 
             // Insert into Department
-            String insertDeptSQL = "INSERT INTO Depart (Did, Dname) VALUES (?, ?)";
+            String insertDeptSQL = "INSERT INTO DepartmentTable (Did, Dname) VALUES (?, ?)";
             PreparedStatement pstmtDept = conn.prepareStatement(insertDeptSQL);
 
             System.out.println("Enter number of departments to insert:");
@@ -38,7 +38,7 @@ public class InsertData {
             System.out.println("Departments inserted successfully!");
 
             // Insert into Employee
-            String insertEmpSQL = "INSERT INTO Emp (Eid, Ename, Salary, Address, Did) VALUES (?, ?, ?, ?, ?)";
+            String insertEmpSQL = "INSERT INTO EmployeeTable (Eid, Ename, Salary, Address, Did) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement pstmtEmp = conn.prepareStatement(insertEmpSQL);
 
             System.out.println("Enter number of employees to insert:");
